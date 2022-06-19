@@ -6,11 +6,18 @@ import(
 	"gorm.io/gorm"
 	"errors"
 	"os"
-	// "log"
+	"log"
+	"github.com/joho/godotenv"
 	// "time"
 	)
 
 func New() (*gorm.DB, error){
+
+	err := godotenv.Load()
+
+    if err != nil {
+        log.Fatal("Error loading .env file")
+      }
 
 	host := os.Getenv("DB_LOCALHOST")
 	user := os.Getenv("DB_USERNAME")
