@@ -1,0 +1,56 @@
+@tokens =Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjU1NDQxMDYzfQ.Nl6SSD2hw8B01EQX7i8IdmjIAIvq2OpbB8sfGZTl1aU
+
+### VEHICLE POPULAR
+GET http://localhost:1616/history/popular HTTP/1.1
+
+### VEHICLE BY ID 
+GET http://localhost:1616/history/user/2 HTTP/1.1
+
+### PENCARIAN
+GET http://localhost:1616/vehicles/1 HTTP/1.1
+
+
+### SEND DATA (CREATE)
+POST http://localhost:1616/users/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "username" : "luke not failed",
+    "password" : "admin",
+    "firstname" : "Luke",
+    "lastname" : "Skywalker",
+    "email" : "skywalkergmail.com"
+}
+
+### GVEHICLE
+GET http://localhost:1616/vehicles/ HTTP/1.1
+Authorization: {{tokens}}
+
+### UPDATE DATA
+PUT http://localhost:1616/vehicles/update/22 HTTP/1.1
+Authorization: {{tokens}}
+Content-Type: application/json
+
+{
+    "name" : "Vespa Putih(update)",
+    "city" : "Jakarta",
+    "type" : "Motorbike"
+}
+
+### DELETE DATA
+DELETE http://localhost:1616/users/delete/15 HTTP/1.1
+Content-Type: application/json
+
+### READ
+GET http://localhost:1616/users/ HTTP/1.1
+Authorization: {{tokens}}
+Content-Type: application/json
+
+### lOGIN
+POST http://localhost:1616/auth/log HTTP/1.1
+Content-Type: application/json
+
+{
+    "username" : "admin",
+    "password" : "admin"
+}

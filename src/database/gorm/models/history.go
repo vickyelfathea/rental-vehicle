@@ -7,10 +7,10 @@ import ("time"
 // gorm.Model definition
 type History struct {
 	ID       	  int           `gorm:"primaryKey"`
-	User          User          `gorm: "foreignkey:Userid"; references: userid`
-	Userid		  int			`gorm:"index"`
-	Vehicle       Vehicle		`gorm: "foreignkey:Vehicleid"; references: vehicleid`
-	Vehicleid	  int			 `gorm:"index"`
+	User          User          `gorm:"constraint:OnUpdate:CASCADE,OnDelete:CASCADE;"`
+	Userid		  int			
+	Vehicle       Vehicle		`gorm:"constraint:OnUpdate:CASCADE,OnDelete:CASCADE;"`
+	Vehicleid	  int			
 	City          string         `json:"city"`
 	Datestart 	  string		 `json:"datestart"`
 	Datefinish	  string		 `json:"datefinish"`

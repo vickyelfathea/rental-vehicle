@@ -4,6 +4,7 @@ import ("github.com/spf13/cobra"
 		"log"
 		"net/http"
 		"carRent/src/routers"
+		"os"
 // "fmt"
 )
 
@@ -17,7 +18,7 @@ func serve(cmd *cobra.Command, args []string) error {
 	if mainRoute, err := routers.New(); err == nil {
 		var address string = "127.0.0.1:1616"
 
-		if port := "1616"; port != "" {
+		if port := os.Getenv("PORT"); port != "" {
 			address = "127.0.0.1:1616"
 		}
 
