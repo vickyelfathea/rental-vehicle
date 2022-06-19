@@ -2,7 +2,6 @@ package routers
 
 import ("net/http"
 	"github.com/gorilla/mux"
-	"carRent/src/modules/v1/products"
 	"carRent/src/modules/v1/users"
 	"carRent/src/modules/v1/vehicles"
 	"carRent/src/modules/v1/history"
@@ -25,7 +24,6 @@ func New() (*mux.Router, error) {
 		return nil, err
 	}
 	
-	products.New(mainRoute, db)
 	users.New(mainRoute, db)
 	vehicles.New(mainRoute, db)
 	history.New(mainRoute, db)
