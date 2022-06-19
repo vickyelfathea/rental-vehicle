@@ -18,13 +18,17 @@ func serve(cmd *cobra.Command, args []string) error {
 	if mainRoute, err := routers.New(); err == nil {
 		var address string = "127.0.0.1:1616"
 
-		if port := os.Getenv("PORT"); port != "" {
+		port := os.Getenv("PORT");
+		
+		if port != "" {
 			address = ":" + port
 		}
 
 		log.Println("App running")
 
-		if err := http.ListenAndServe(address, mainRoute); err != nil {
+		err := http.ListenAndServe(address, mainRoute)
+		
+		if err != nil {
 			return err
 		}
 		
