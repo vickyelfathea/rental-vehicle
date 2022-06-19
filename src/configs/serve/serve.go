@@ -19,7 +19,7 @@ func serve(cmd *cobra.Command, args []string) error {
 		var address string = "127.0.0.1:1616"
 
 		if port := os.Getenv("PORT"); port != "" {
-			address = "127.0.0.1:" + port
+			address = port
 		}
 
 		log.Println("App running")
