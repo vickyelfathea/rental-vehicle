@@ -6,8 +6,8 @@ import(
 	"gorm.io/gorm"
 	"errors"
 	"os"
-	"log"
-	"github.com/joho/godotenv"
+	// "log"
+	// "github.com/joho/godotenv"
 	// "time"
 	)
 
