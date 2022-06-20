@@ -1,21 +1,11 @@
-APP=carRent
+APP=car-rent
 APP_EXE="./build/$(APP)"
 
-build:
-	go build -o bin/main .
+runs:
+	go run main.go server
 
 run:
-	go run main.go serve
+	./build/$(APP) server
 
-
-compile:
-	echo "Compiling for every OS and Platform"
-	GOOS=linux GOARCH=arm go build -o bin/main-linux-arm main.go
-	GOOS=linux GOARCH=arm64 go build -o bin/main-linux-arm64 main.go
-	GOOS=freebsd GOARCH=386 go build -o bin/main-freebsd-386 main.go
-
-serve:
-	mkdir -p ./build && CGO_ENABLED=0 GOOS=linux go build -o ${APP_EXE}
-
-test:
-	go test -cover -v ./...
+build:
+	mkdir -p ./build && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ${APP_EXE}
