@@ -1,1 +1,1 @@
-web: build/car-rent serve
+web: chmod +x build/car-rent serve
