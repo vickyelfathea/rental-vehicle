@@ -1,1 +1,1 @@
-web: ./build/car-rent serve
+web: sudo ./build/car-rent serve
