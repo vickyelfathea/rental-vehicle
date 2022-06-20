@@ -1,1 +1,1 @@
-web: bin/carRent
+web: bin/carRent serve
