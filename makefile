@@ -2,8 +2,8 @@ APP=carRent
 APP_EXE="./build/$(APP)"
 
 build:
-	go build -o bin/main main.go
-
+	go build -o bin/main.
+	
 run:
 	go run main.go serve
 
