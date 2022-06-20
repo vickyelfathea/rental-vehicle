@@ -1,1 +1,1 @@
-web: ./build/carRent serve
+web: bin/main serve
