@@ -1,4 +1,4 @@
-APP=rental-vehicles
+APP=carRent
 APP_EXE="./build/$(APP)"
 
 serve:
