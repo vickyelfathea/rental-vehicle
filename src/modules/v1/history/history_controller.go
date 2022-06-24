@@ -22,6 +22,8 @@ func NewCtrl(rep interfaces.HistoryService) *history_ctrl {
 
 func (rep *history_ctrl) GetAll(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+    w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 
 	data, err := rep.repo.FindAll()
 
