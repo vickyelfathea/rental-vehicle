@@ -3,17 +3,12 @@ package history
 import (
 	"testing"
 
-	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
 
 	"carRent/src/database/gorm/models"
 	"carRent/src/modules/v1/history/mocks"
 )
-
-// var modelMock = models.History{
-// 	ID: 1,
-// 	Userid: 1,
-// }
 
 var modelMockResult = models.Results{
 	models.Result {ID: 1, Firstname: "dua"},
@@ -29,7 +24,6 @@ var modelMocks = models.Histories{
 	models.History {ID: 1},
 	models.History {ID: 2},
 }
-
 
 func TestFindId(t *testing.T) {
 	var repo = mocks.RepoMock{Mock: mock.Mock{}}

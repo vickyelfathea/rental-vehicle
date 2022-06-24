@@ -1,7 +1,10 @@
 package mocks
 
-import ("github.com/stretchr/testify/mock"
-		"carRent/src/database/gorm/models")
+import (
+	"carRent/src/database/gorm/models"
+
+	"github.com/stretchr/testify/mock"
+)
 
 type RepoMock struct {
 	Mock mock.Mock

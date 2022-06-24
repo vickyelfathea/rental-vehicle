@@ -13,7 +13,7 @@ func New(rt *mux.Router, db *gorm.DB) {
 	svc := NewService(repo)
 	ctrl := NewCtrl(svc)
 
-	route.HandleFunc("/", middleware.Do(ctrl.GetAll, middleware.CheckAuth)).Methods("GET")
+	route.HandleFunc("/", ctrl.GetAll).Methods("GET")
 	route.HandleFunc("/", ctrl.AddData).Methods("POST")
 	route.HandleFunc("/update/{id}", middleware.Do(ctrl.UpdateData, middleware.CheckAuth)).Methods("PUT")
 	route.HandleFunc("/delete/{id}", ctrl.DeleteData).Methods("DELETE")

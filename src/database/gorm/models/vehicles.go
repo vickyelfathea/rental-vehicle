@@ -10,6 +10,7 @@ type Vehicle struct {
 	Name		  string		 `json:"name"`
 	City	 	  string		 `json:"city"`
 	Type	 	  string		 `json:"type"`
+	Image 		  string		 `json:"type"`
 	Createdat 	  time.Time		 `json:"createdat"`
 	Updatedat 	  time.Time      `json:"updatedat"`
 	// DeletedAt gorm.DeletedAt `gorm:"index"`
