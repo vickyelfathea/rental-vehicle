@@ -23,13 +23,13 @@ Content-Type: application/json
 }
 
 ### SEND DATA (CREATE) VEHICLE
-POST http://localhost:1616/users/ HTTP/1.1
+POST http://localhost:1616/vehicles/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "name" : "g wagon",
-    "city" : "jakarta",
-    "type" : "car",
+    "name" : "Honda beat",
+    "city" : "malang",
+    "type" : "motorbike",
     "image" : "https://images.unsplash.com/photo-1617045434421-a72d713fc8a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
 }
 
@@ -38,14 +38,15 @@ GET http://localhost:1616/vehicles/ HTTP/1.1
 Authorization: {{tokens}}
 
 ### UPDATE DATA
-PUT http://localhost:1616/vehicles/update/22 HTTP/1.1
+PUT http://localhost:1616/vehicles/update/2
 Authorization: {{tokens}}
 Content-Type: application/json
 
 {
-    "name" : "Vespa Putih(update)",
-    "city" : "Jakarta",
-    "type" : "Motorbike"
+    "name" : "lamborghini urus",
+    "city" : "jakarta",
+    "type" : "car",
+    "image" : "https://images.unsplash.com/photo-1619097763751-2881df85ed25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
 }
 
 ### DELETE DATA
