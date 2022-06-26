@@ -92,6 +92,8 @@ func (rep *vehicle_ctrl) DeleteData(w http.ResponseWriter, r *http.Request) {
 
 func (rep *vehicle_ctrl) GetById(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+    w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 
 	param := mux.Vars(r)
 	id, err := strconv.Atoi(param["id"]) 
