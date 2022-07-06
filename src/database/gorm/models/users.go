@@ -12,7 +12,7 @@ type User struct {
 	Username	  string		 `json:"username"`
 	Password	  string		 `json:"password"`
 	City	 	  string		 `json:"city"`
-	Email 		  string 		 `validate:"email"`
+	Email 		  string 		 `json:"email"`
 	Createdat 	  time.Time		 `json:"created_at"`
 	Updateat 	  time.Time      `json:"updated_at"`
 	// DeletedAt gorm.DeletedAt `gorm:"index"`
