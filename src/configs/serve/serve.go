@@ -5,6 +5,8 @@ import ("github.com/spf13/cobra"
 		"net/http"
 		"carRent/src/routers"
 		"os"
+
+		"github.com/rs/cors"
 // "fmt"
 )
 
@@ -26,7 +28,9 @@ func serve(cmd *cobra.Command, args []string) error {
 
 		log.Println("App running")
 
-		err := http.ListenAndServe(address, mainRoute)
+		t := cors.AllowAll()
+
+		err := http.ListenAndServe(address, t.Handler(mainRoute))
 		
 		if err != nil {
 			return err

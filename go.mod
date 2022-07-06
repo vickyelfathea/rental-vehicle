@@ -28,6 +28,7 @@ require (
 	github.com/newrelic/go-agent/v3 v3.16.1 // indirect
 	github.com/newrelic/go-agent/v3/integrations/nrgorilla v1.1.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/rs/cors v1.8.2 // indirect
 	github.com/spf13/cobra v1.4.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/stretchr/objx v0.4.0 // indirect
