@@ -1,14 +1,16 @@
 package vehicles
 
-import ("net/http"
-		"fmt"
-		"encoding/json"
-		"github.com/gorilla/mux"
-		"strconv"
-		"reflect"
-		"carRent/src/database/gorm/models"
-		"carRent/src/interfaces"
-	)
+import (
+	"carRent/src/database/gorm/models"
+	"carRent/src/interfaces"
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"reflect"
+	"strconv"
+
+	"github.com/gorilla/mux"
+)
 
 type vehicle_ctrl struct {
 	repo interfaces.VehicleService

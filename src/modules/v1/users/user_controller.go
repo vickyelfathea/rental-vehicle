@@ -34,6 +34,8 @@ func (rep *user_ctrl) GetAll(w http.ResponseWriter, r *http.Request) {
 
 func (rep *user_ctrl) AddData(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+    w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 
 	var data models.User
 	json.NewDecoder(r.Body).Decode(&data)
@@ -49,6 +51,8 @@ func (rep *user_ctrl) AddData(w http.ResponseWriter, r *http.Request) {
 
 func (rep *user_ctrl) UpdateData(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+    w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 	
 	vars := r.URL.Query()
 
@@ -75,6 +79,8 @@ func (rep *user_ctrl) UpdateData(w http.ResponseWriter, r *http.Request) {
 
 func (rep *user_ctrl) DeleteData(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+    w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 
 	param := mux.Vars(r)
 	id, err := strconv.Atoi(param["id"]) 
