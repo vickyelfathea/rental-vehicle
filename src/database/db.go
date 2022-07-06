@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"log"
+	// "log"
 
-	"github.com/joho/godotenv"
+	// "github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	// "time"
@@ -15,11 +15,11 @@ import (
 
 func New() (*gorm.DB, error){
 
-	err := godotenv.Load()
+	// err := godotenv.Load()
 
-    if err != nil {
-        log.Fatal("Error loading .env file")
-      }
+    // if err != nil {
+    //     log.Fatal("Error loading .env file")
+    //   }
 
 	host := os.Getenv("DB_LOCALHOST")
 	user := os.Getenv("DB_USERNAME")
