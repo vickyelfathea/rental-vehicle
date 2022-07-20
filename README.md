@@ -16,7 +16,7 @@
 1. Clone the repository
 
 ```bash
-git clone https://github.com/biFebriansyah/goback.git
+git clone https://github.com/vickyelfathea/rental-vehicle.git
 ```
 
 2. Install dependencies
