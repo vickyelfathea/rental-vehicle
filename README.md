@@ -2,7 +2,7 @@
   Golang Restfull Api With Gorilla/mux: Rental Vehicle
 </h1>
 
-<p align="center"><img src="[https://yt3.ggpht.com/ytc/AKedOLT7YD9x6PiR-CfbBbFC3wz2WatiIZFrI_I0v-6k=s900-c-k-c0x00ffffff-no-rj](https://drive.google.com/drive/u/0/my-drive?sort=13&direction=a)" width="400px" alt="rental vehicle" /></p>
+<p align="center"><img src="./Screenshot_2.jpg" width="100%" alt="rental vehicle" /></p>
 
 <p align="center">
     <a href="https://www.fazztrack.com/" target="blank">Our Website</a>
@@ -37,9 +37,9 @@ go run *.go
 
 ## 💻 Built with
 
--   [Golang](https://go.dev/)
--   [gorilla/mux](https://github.com/gorilla/mux): for handle http request
--   [Postgres](https://www.postgresql.org/): for DBMS
+- [Golang](https://go.dev/)
+- [gorilla/mux](https://github.com/gorilla/mux): for handle http request
+- [Postgres](https://www.postgresql.org/): for DBMS
 
 <hr>
 <p align="center">
